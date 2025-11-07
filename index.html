@@ -9,11 +9,11 @@
 </head>
 <body>
   <header>
-    <h1>selfcare.btcl</h1>
+    <h1>selfcare.mvno.btcl</h1>
     <p>_____________________________________<p>
     <nav class="navbar">
       <a class="active" href="#" onclick="openTab(event, 'home')">Home</a>
-      <a href="#" onclick="openTab(event, 'gpon')">Plans</a>
+      <a href="#" onclick="openTab(event, 'plans')">Plans</a>
       <a href="#" onclick="openTab(event, 'lli')">Mix</a>
       <a href="#" onclick="openTab(event, 'vpn')">History</a>
       <a href="#" onclick="openTab(event, 'domain')">Rates</a>
@@ -36,10 +36,11 @@
   </div>
 
      <div class="card">
+
       <!-- Package Card -->
       <div class="package-card">
       <h2 class="package-title">Your Package</h2>
-      <span class="details-link">Details</span>
+      <div class="details-link">Details</div>
 
         <!-- Talktime -->
         <div class="package-row">
@@ -93,10 +94,11 @@
           </div>
         </div>
       </div>
+      <!-- End of Package Card -->
 
     </div>
 
-
+<!-- End of Home Tab -->
 
 
 
@@ -106,7 +108,48 @@
   </div>
 
   <!-- Other Tabs -->
-  <div id="gpon" class="tab-content"><div class="card"><h2>GPON File</h2><p>Description here...</p></div></div>
+  <div id="plans" class="tab-content">
+    <div class="cards">
+
+      <div class="card">
+
+        <!-- Mobile Pack -->
+        <!-- Package Card --><div class='package-card'><h2 class='package-title'>Mobile Pack</h2><span class='price-link'>400 Taka/Month</span><div class='package-row'><div class='col label'>Talktime</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag alaap'>Alaap</div></div><div class='col amounts'><div>300 Minute</div><div>200 Minute</div></div></div><div class='package-row'><div class='col label'>Internet</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag gpon'>GPON</div></div><div class='col amounts'><div>5GB</div><div>0</div></div></div><div class='package-row'><div class='col label'>Content</div><div class='col providers'><div class='tag ott'>OTT</div></div><div class='col amounts'><div>5 Platforms</div></div></div></div><!-- End of Package Card --><button class='buynow-btn'>Buy Now</button>
+      
+      </div>
+
+      <div class="card">
+
+        <!-- Family Combo -->
+        
+        <!-- Package Card --><div class='package-card'><h2 class='package-title'>Family Combo</h2><span class='price-link'>1000 Taka/Month</span><div class='package-row'><div class='col label'>Talktime</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag alaap'>Alaap</div></div><div class='col amounts'><div>300 Minute</div><div>400 Minute</div></div></div><div class='package-row'><div class='col label'>Internet</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag gpon'>GPON</div></div><div class='col amounts'><div>5GB</div><div>15 Mbps GPON+Router</div></div></div><div class='package-row'><div class='col label'>Content</div><div class='col providers'><div class='tag ott'>OTT</div></div><div class='col amounts'><div>5 Platforms</div></div></div></div><!-- End of Package Card --><button class='buynow-btn'>Buy Now</button>
+
+      </div>  
+
+      <div class="card">
+
+       <!-- Unlimited -->
+       
+       <!-- Package Card --><div class='package-card'><h2 class='package-title'>Unlimited/Business</h2><span class='price-link'>2500 Taka/Month</span><div class='package-row'><div class='col label'>Talktime</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag alaap'>Alaap</div></div><div class='col amounts'><div>600 Minute</div><div>600 Minute</div></div></div><div class='package-row'><div class='col label'>Internet</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag gpon'>GPON</div></div><div class='col amounts'><div>60GB</div><div>15 Mbps GPON+Router</div></div></div><div class='package-row'><div class='col label'>Content</div><div class='col providers'><div class='tag ott'>OTT</div></div><div class='col amounts'><div>5 Platforms</div></div></div></div><!-- End of Package Card --><button class='buynow-btn'>Buy Now</button>
+
+      </div>  
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="lli" class="tab-content"><div class="card"><h2>LLI File</h2><p>Description here...</p></div></div>
   <div id="vpn" class="tab-content"><div class="card"><h2>VPN File</h2><p>Description here...</p></div></div>
   <div id="domain" class="tab-content"><div class="card"><h2>Domain File</h2><p>Description here...</p></div></div>
