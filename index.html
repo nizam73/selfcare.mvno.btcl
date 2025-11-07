@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTCL Selfcare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>selfcare.btcl</h1>
+    <p>_____________________________________<p>
+    <nav class="navbar">
+      <a class="active" href="#" onclick="openTab(event, 'home')">Home</a>
+      <a href="#" onclick="openTab(event, 'gpon')">Plans</a>
+      <a href="#" onclick="openTab(event, 'lli')">Mix</a>
+      <a href="#" onclick="openTab(event, 'vpn')">History</a>
+      <a href="#" onclick="openTab(event, 'domain')">Rates</a>
+    </nav>
+  </header>
+
+  <!-- Home Tab -->
+  <div id="home" class="tab-content active">
+    <div class="cards">
+      <div class="card">
+
+      <!-- Balance Card -->
+      <div class="balance-card">
+        <div class="balance-info">
+          <p>Balance</p>
+          <h2>2050 Taka</h2>
+        </div>
+        <button class="recharge-btn">Recharge</button>
+     </div>
+  </div>
+
+     <div class="card">
+      <!-- Package Card -->
+      <div class="package-card">
+      <h2 class="package-title">Your Package</h2>
+      <span class="details-link">Details</span>
+
+        <!-- Talktime -->
+        <div class="package-row">
+          <div class="col label">Talktime</div>
+          <div class="col providers">
+            <div class="tag btcl">BTCL</div>
+            <div class="tag alaap">Alaap</div>
+          </div>
+          <div class="col amounts">
+            <div>0/0 Minute</div>
+            <div>0/0 Minute</div>
+          </div>
+        </div>
+
+        <!-- Internet -->
+        <div class="package-row">
+          <div class="col label">Internet</div>
+          <div class="col providers">
+            <div class="tag btcl">BTCL</div>
+            <div class="tag gpon">GPON</div>
+          </div>
+          <div class="col amounts">
+            <div>0/0 GB</div>
+            <div>0 Mbps</div>
+          </div>
+        </div>
+
+        <!-- SMS -->
+        <div class="package-row">
+          <div class="col label">SMS</div>
+          <div class="col providers">
+            <div class="tag btcl">BTCL</div>
+            <div class="tag alaap">Alaap</div>
+          </div>
+          <div class="col amounts">
+            <div>0/0</div>
+            <div>0/0</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="package-row">
+          <div class="col label">Content</div>
+          <div class="col providers">
+            <div class="tag ott">OTT</div>
+            <div class="tag iptv">IPTV</div>
+          </div>
+          <div class="col amounts">
+            <div>0 Platforms</div>
+            <div>0 Channels</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Other Tabs -->
+  <div id="gpon" class="tab-content"><div class="card"><h2>GPON File</h2><p>Description here...</p></div></div>
+  <div id="lli" class="tab-content"><div class="card"><h2>LLI File</h2><p>Description here...</p></div></div>
+  <div id="vpn" class="tab-content"><div class="card"><h2>VPN File</h2><p>Description here...</p></div></div>
+  <div id="domain" class="tab-content"><div class="card"><h2>Domain File</h2><p>Description here...</p></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
