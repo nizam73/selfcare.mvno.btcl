@@ -106,10 +106,12 @@ nav {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
 }
+
+
 
 /* Package Card 
 .package-card {
@@ -132,6 +134,14 @@ nav {
   font-size: 14px;
   margin-top: 4px;
 }
+
+.price-link {
+  float: right;
+  color: #222;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
 
 /* 3-column layout */
 .package-row {
@@ -184,6 +194,26 @@ nav {
 .gpon { background-color: #008d3f; }
 .ott { background-color: #e53935; }
 .iptv { background-color: #ff7043; }
+
+.btcl, .alaap, .gpon, .ott, .iptv {
+  display: inline-block;
+  width: 50px; /* 👈 set equal width for all */
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+  padding: 0px 0;
+}
+
+.buynow-btn {
+  background-color: #f17501;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  float: right;
+}
 
 @media (max-width: 600px) {
   .card {
