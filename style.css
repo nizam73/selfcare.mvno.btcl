@@ -231,6 +231,15 @@ nav {
 .ott  { background-color: #e53935; }
 .iptv { background-color: #ff7043; }
 
+.btcl, .alaap, .gpon, .ott, .iptv {
+  display: inline-block;
+  width: 50px; /* 👈 set equal width for all */
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+  padding: 0px 0;
+}
+
 /* ========== Buttons ========== */
 .buynow-btn {
   background-color: #f17501;
@@ -277,4 +286,5 @@ nav {
     padding: 8px 16px;
   }
 }
+
 
