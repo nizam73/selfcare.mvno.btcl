@@ -125,7 +125,7 @@ nav {
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
 }
 
 .balance-info p {
@@ -277,3 +277,4 @@ nav {
     padding: 8px 16px;
   }
 }
+
