@@ -1,4 +1,4 @@
-/* ===== Global ===== */
+/* ========== Global Styles ========== */
 body {
   font-family: "Jost", sans-serif;
   margin: 0;
@@ -18,7 +18,7 @@ header h1 {
   font-size: 24px;
 }
 
-/* ===== Navbar ===== */
+/* ========== Navbar ========== */
 nav {
   margin-top: 10px;
 }
@@ -27,10 +27,12 @@ nav {
   display: flex;
   justify-content: center;
   overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
   background: #2ab573;
   padding: 10px 0;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE */
+  scroll-behavior: smooth;
 }
 
 .navbar::-webkit-scrollbar {
@@ -38,20 +40,31 @@ nav {
 }
 
 .navbar a {
-  text-decoration: none;
+  flex: 0 0 auto;
   color: white;
-  margin: 0 15px;
+  text-decoration: none;
   font-weight: 500;
+  padding: 10px 15px;
+  transition: all 0.25s ease;
   border-bottom: 2px solid transparent;
-  flex: 0 0 auto; /* Prevent shrinking */
-  transition: border-bottom 0.3s, color 0.3s;
+  border-radius: 4px;
 }
 
+/* Hover and focus (tap) state */
+.navbar a:hover,
+.navbar a:focus {
+  color: #e0ffe9;
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff50; /* subtle white glow */
+}
+
+/* Active tab (currently selected) */
 .navbar a.active {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
 }
 
-/* ✅ Small screens: Left align + scroll */
+/* ✅ Small screens: Align navbar left */
 @media (max-width: 600px) {
   .navbar {
     justify-content: flex-start;
@@ -59,7 +72,7 @@ nav {
   }
 }
 
-/* ===== Tabs ===== */
+/* ========== Tabs ========== */
 .tab-content {
   display: none;
   margin-top: 30px;
@@ -70,7 +83,7 @@ nav {
   display: flex;
 }
 
-/* ===== Cards ===== */
+/* ========== Cards ========== */
 .cards {
   display: flex;
   flex-direction: column;
@@ -85,32 +98,47 @@ nav {
   max-width: 500px;
   background: #fff;
   padding: 25px;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
   border: 2px solid #2ab573;
+  box-sizing: border-box;
 }
 
-/* ===== Balance Section ===== */
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #006b4f;
+}
+
+.card p {
+  margin-top: 0;
+  color: #555;
+}
+
+/* ========== Balance Section ========== */
 .balance-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
-  padding: 5px 5px;
-  margin-bottom: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .balance-info p {
   margin: 0;
   font-size: 14px;
+  color: #444;
 }
 
 .balance-info h2 {
   margin: 5px 0 0;
   color: #006b4f;
   font-size: 24px;
+  font-weight: 600;
 }
 
 .recharge-btn {
@@ -118,12 +146,17 @@ nav {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.25s;
 }
 
-/* ===== Package Layout ===== */
+.recharge-btn:hover {
+  background-color: #009b5e;
+}
+
+/* ========== Package Section ========== */
 .package-title {
   font-size: 20px;
   color: #006b4f;
@@ -136,6 +169,7 @@ nav {
   color: gray;
   font-size: 14px;
   margin-top: 4px;
+  text-decoration: none;
 }
 
 .price-link {
@@ -145,7 +179,7 @@ nav {
   margin-top: 4px;
 }
 
-/* ===== 3-Column Rows ===== */
+/* ========== 3-Column Rows ========== */
 .package-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -178,7 +212,7 @@ nav {
   color: #555;
 }
 
-/* ===== Tags ===== */
+/* ========== Service Tags ========== */
 .tag {
   display: inline-block;
   padding: 3px 10px;
@@ -187,33 +221,59 @@ nav {
   font-size: 13px;
   font-weight: 600;
   color: white;
-  width: 70px; /* Equal width for all */
+  width: 70px;
   text-align: center;
 }
 
-/* ===== Provider Colors ===== */
 .btcl { background-color: #009e60; }
 .alaap { background-color: #1f2e99; }
 .gpon { background-color: #008d3f; }
-.ott { background-color: #e53935; }
+.ott  { background-color: #e53935; }
 .iptv { background-color: #ff7043; }
 
-/* ===== Buy Button ===== */
+/* ========== Buttons ========== */
 .buynow-btn {
   background-color: #f17501;
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
   float: right;
+  transition: opacity 0.25s ease;
 }
 
-/* ===== Mobile Adjustments ===== */
+.buynow-btn:hover {
+  opacity: 0.9;
+}
+
+/* ========== Divider ========== */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+  border: none;
+}
+
+/* ========== Responsive Adjustments ========== */
 @media (max-width: 600px) {
   .card {
     width: 95%;
     padding: 18px;
+  }
+
+  .package-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .balance-info h2 {
+    font-size: 20px;
+  }
+
+  .recharge-btn {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
