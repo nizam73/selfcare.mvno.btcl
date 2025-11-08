@@ -1,4 +1,4 @@
-/* Global */
+/* ===== Global ===== */
 body {
   font-family: "Jost", sans-serif;
   margin: 0;
@@ -18,6 +18,7 @@ header h1 {
   font-size: 24px;
 }
 
+/* ===== Navbar ===== */
 nav {
   margin-top: 10px;
 }
@@ -28,11 +29,12 @@ nav {
   overflow-x: auto;
   background: #2ab573;
   padding: 10px 0;
-  scrollbar-width: none;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
 }
 
 .navbar::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome/Safari */
 }
 
 .navbar a {
@@ -41,192 +43,13 @@ nav {
   margin: 0 15px;
   font-weight: 500;
   border-bottom: 2px solid transparent;
+  flex: 0 0 auto; /* Prevent shrinking */
+  transition: border-bottom 0.3s, color 0.3s;
 }
 
 .navbar a.active {
   border-bottom: 2px solid white;
 }
 
-/* ✅ Small screens: Align navbar left */
-@media (max-width: 600px) {
-  .navbar {
-    justify-content: flex-start;
-    padding-left: 10px;
-  }
-}
-
-/* Tabs */
-.tab-content {
-  display: none;
-  margin-top: 30px;
-  justify-content: center;
-}
-
-.tab-content.active {
-  display: flex;
-}
-
-/* Cards */
-.cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  padding: 0 10px;
-}
-
-.card {
-  width: 90%;
-  max-width: 500px;
-  background: #fff;
-  padding: 25px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  border: 2px solid #2ab573;
-}
-
-/* Balance Section */
-.balance-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 5px 5px;
-  margin-bottom: 5px;
-}
-
-.balance-info p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.balance-info h2 {
-  margin: 5px 0 0;
-  color: #006b4f;
-  font-size: 24px;
-}
-
-.recharge-btn {
-  background-color: #007f4e;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-
-
-/* Package Card 
-.package-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}*/
-
-.package-title {
-  font-size: 20px;
-  color: #006b4f;
-  display: inline-block;
-  margin: 0;
-}
-
-.details-link {
-  float: right;
-  color: gray;
-  font-size: 14px;
-  margin-top: 4px;
-}
-
-.price-link {
-  float: right;
-  color: #222;
-  font-size: 14px;
-  margin-top: 4px;
-}
-
-
-/* 3-column layout */
-.package-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.package-row:last-child {
-  border-bottom: none;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-}
-
-.label {
-  text-align: left;
-  font-weight: 600;
-  color: #444;
-}
-
-.providers {
-  align-items: center;
-  text-align: center;
-}
-
-.amounts {
-  text-align: right;
-  color: #555;
-}
-
-.tag {
-  display: inline-block;
-  padding: 3px 10px;
-  margin: 3px auto;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
-  width: fit-content;
-}
-
-/* Provider colors */
-.btcl { background-color: #009e60; }
-.alaap { background-color: #1f2e99; }
-.gpon { background-color: #008d3f; }
-.ott { background-color: #e53935; }
-.iptv { background-color: #ff7043; }
-
-.btcl, .alaap, .gpon, .ott, .iptv {
-  display: inline-block;
-  width: 50px; /* 👈 set equal width for all */
-  text-align: center;
-  color: white;
-  border-radius: 4px;
-  padding: 0px 0;
-}
-
-.buynow-btn {
-  background-color: #f17501;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  float: right;
-}
-
-@media (max-width: 600px) {
-  .card {
-    width: 95%;
-    padding: 18px;
-  }
-}
-
+/* ✅ Small screens: Left align + scroll */
+@me
