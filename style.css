@@ -47,6 +47,14 @@ nav {
   border-bottom: 2px solid white;
 }
 
+/* ✅ Small screens: Align navbar left */
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+}
+
 /* Tabs */
 .tab-content {
   display: none;
@@ -221,3 +229,4 @@ nav {
     padding: 18px;
   }
 }
+
