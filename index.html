@@ -6,6 +6,7 @@
   <title>BTCL Selfcare</title>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
   <header>
@@ -14,7 +15,7 @@
     <nav class="navbar">
       <a class="active" href="#" onclick="openTab(event, 'home')">Home</a>
       <a href="#" onclick="openTab(event, 'plans')">Plans</a>
-      <a href="#" onclick="openTab(event, 'lli')">Mix</a>
+      <a href="#" onclick="openTab(event, 'mix')">Mix</a>
       <a href="#" onclick="openTab(event, 'vpn')">History</a>
       <a href="#" onclick="openTab(event, 'domain')">Rates</a>
     </nav>
@@ -120,16 +121,14 @@
 
       <div class="card">
 
-        <!-- Family Combo -->
-        
+        <!-- Family Combo -->        
         <!-- Package Card --><div class='package-card'><h2 class='package-title'>Family Combo</h2><span class='price-link'>1000 Taka/Month</span><div class='package-row'><div class='col label'>Talktime</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag alaap'>Alaap</div></div><div class='col amounts'><div>300 Minute</div><div>400 Minute</div></div></div><div class='package-row'><div class='col label'>Internet</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag gpon'>GPON</div></div><div class='col amounts'><div>5GB</div><div>15 Mbps GPON+Router</div></div></div><div class='package-row'><div class='col label'>Content</div><div class='col providers'><div class='tag ott'>OTT</div></div><div class='col amounts'><div>5 Platforms</div></div></div></div><!-- End of Package Card --><button class='buynow-btn'>Buy Now</button>
 
       </div>  
 
       <div class="card">
 
-       <!-- Unlimited -->
-       
+       <!-- Unlimited -->       
        <!-- Package Card --><div class='package-card'><h2 class='package-title'>Unlimited</h2><span class='price-link'>2500 Taka/Month</span><div class='package-row'><div class='col label'>Talktime</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag alaap'>Alaap</div></div><div class='col amounts'><div>600 Minute</div><div>600 Minute</div></div></div><div class='package-row'><div class='col label'>Internet</div><div class='col providers'><div class='tag btcl'>BTCL</div><div class='tag gpon'>GPON</div></div><div class='col amounts'><div>60GB</div><div>15 Mbps GPON+Router</div></div></div><div class='package-row'><div class='col label'>Content</div><div class='col providers'><div class='tag ott'>OTT</div></div><div class='col amounts'><div>5 Platforms</div></div></div></div><!-- End of Package Card --><button class='buynow-btn'>Buy Now</button>
 
       </div>  
@@ -137,25 +136,54 @@
     </div>
   </div>
 
+ <!-- Old Mix Tab
+  <div id="mix" class="tab-content"><div class="card"><h2>Mix Card</h2><p>Description here...</p></div></div>
+  -->  
+  <!-- Mix Tab -->  
+  <div id="mix" class="tab-content">
+    <div class="mix-container">
+      <h2 class="mix-title">Mix Your Own Package</h2>
 
+      <div id="package-container">
+        <div class="category" id="talktime">
+          <h3>Talktime</h3>
+          <div class="card-list" id="talktime-list"></div>
+        </div>
 
+        <div class="category" id="internet">
+          <h3>Internet</h3>
+          <div class="card-list" id="internet-list"></div>
+        </div>
 
+        <div class="category" id="sms">
+          <h3>SMS</h3>
+          <div class="card-list" id="sms-list"></div>
+        </div>
 
+        <div class="category" id="content">
+          <h3>Content</h3>
+          <div class="card-list" id="content-list"></div>
+        </div>
+      </div>
+    </div>
 
-
-
-
-
-
-
-
-
-  <div id="lli" class="tab-content"><div class="card"><h2>Mix Card</h2><p>Description here...</p></div></div>
+    <!-- Fixed Summary -->
+    <div id="summary">
+      <h3>Your Selection</h3>
+      <ul id="summary-list"></ul>
+      <p class="total">Total: <span id="total-price">0</span> Taka</p>
+      <button id="confirm-btn">Confirm Selection</button>
+    </div>
+  </div>
+  
+  
+  
+  
+  
   <div id="vpn" class="tab-content"><div class="card"><h2>History Card</h2><p>Description here...</p></div></div>
   <div id="domain" class="tab-content"><div class="card"><h2>Rate Card</h2><p>Description here...</p></div></div>
-
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
 
