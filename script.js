@@ -93,6 +93,8 @@ function renderPackages(data) {
   });
 }
 
+// CARD Creation
+
 function createCard(container, name, quantity, price, category) {
   if (!container) return;
   if (!name || !quantity) return;
@@ -103,7 +105,9 @@ function createCard(container, name, quantity, price, category) {
   card.innerHTML = `
     <h4>${quantity}</h4>
     <p>${name}</p>
-    <p><b>${price}</b></p>
+    
+    <!-------------------------IF want to add price add this: <p><b>${price}</b></p> -->
+    
   `;
 
   card.addEventListener("click", () =>
@@ -128,6 +132,8 @@ function toggleSelect(card, category, name, quantity, price) {
   updateSummary();
 }
 
+// Summary--------------------------
+
 function updateSummary() {
   const list = document.getElementById("summary-list");
   const total = document.getElementById("total-price");
@@ -135,21 +141,27 @@ function updateSummary() {
   list.innerHTML = "";
   let totalPrice = 0;
 
+  const li = document.createElement("li");
+  li.style.whiteSpace = "nowrap"; // keep it in one line
+
+  const parts = []; // collect items in an array
+
   Object.values(selected).forEach((item) => {
     if (item) {
-      const li = document.createElement("li");
-      li.innerHTML = `
-        <span>${item.quantity} ${item.name}</span>
-        <span>${item.price}</span>
-      `;
-      list.appendChild(li);
-
+      parts.push(`${item.quantity} ${item.name}`);
       totalPrice += parseInt(item.price) || 0;
     }
   });
 
+  // join with |
+  li.textContent = parts.join(" | ");
+
+  list.appendChild(li);
   total.textContent = totalPrice;
 }
+
+
+//<!-- <span>${item.price}</span> -->
 
 document.getElementById("confirm-btn").addEventListener("click", () => {
   alert("Package confirmation coming soon!");
